@@ -39,8 +39,8 @@ public class Lift {
 					// t2
 					else if(this.input.substring(0,4).equals("DrCl")){
 						String args = this.input.split("\\(")[1].split("\\)")[0];
-						pos = args.split(",")[0];
-						pw = args.split(",")[1];
+						pos = Integer.parseInt(args.split(",")[0]);
+						pw = Integer.parseInt(args.split(",")[1]);
 
 						if(drst == 1 && pos >= 0 && pos <= 15){
 							drst = 0;
@@ -54,9 +54,9 @@ public class Lift {
 					// t3
 					else if(this.input.substring(0,3).equals("Srv")){
 						String args = this.input.split("\\(")[1].split("\\)")[0];
-						pf = args.split(",")[0];
-						ph = args.split(",")[1];
-						ps = args.split(",")[2];
+						pf = Integer.parseInt(args.split(",")[0]);
+						ph = Integer.parseInt(args.split(",")[1]);
+						ps = Integer.parseInt(args.split(",")[2]);
 
 						if(drst == 0 && pf == 1 && w >=15 && w<=250 && ph >= 10 && ph <= 35 && ps >= 0 && ps <= 25){
 							floor = 1;
@@ -67,9 +67,9 @@ public class Lift {
 					// t5
 					else if(this.input.substring(0,3).equals("Req")){
 						String args = this.input.split("\\(")[1].split("\\)")[0];
-						pf = args.split(",")[0];
-						ph = args.split(",")[1];
-						ps = args.split(",")[2];
+						pf = Integer.parseInt(args.split(",")[0]);
+						ph = Integer.parseInt(args.split(",")[1]);
+						ps = Integer.parseInt(args.split(",")[2]);
 
 						if(drst == 0 && pf == 1 && w == 0 && ph >=10 && ph <= 35 && ps >=0 && ps <=25){
 							floor = 1;
